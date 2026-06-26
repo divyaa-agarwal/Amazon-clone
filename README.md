@@ -5,7 +5,7 @@ A front-end clone of the Amazon homepage built using HTML5 and CSS3. This projec
 🌐 Live Demo
 
 Visit the live website:
-https://divyaa-agarwal.github.io/Amazon-clone/amazon_clone/
+https://divyaa-agarwal.github.io/Amazon-clone/
 
 ✨ Features
 
