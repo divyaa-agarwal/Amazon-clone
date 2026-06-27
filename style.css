@@ -98,12 +98,15 @@ span{
   align-items: center;
 }
 .panel-ops{
-  width:70%;
+  /* width:70%; */
+  display: flex;
+  flex: 1;
   font-size: 0.85rem;
 }
 .panel-ops p{
-  display:inline;
-  margin-right:20px;
+  /* display:inline; */
+  margin-right:8px;
+  white-space: nowrap;
 }
 .panel-deals{
   font-size:0.9rem;
@@ -145,11 +148,13 @@ main{
   z-index: 20;
   /* background: rgba(255,255,255,0.9); */
   display: flex;
+  flex-wrap: wrap;
   color: white;
   justify-content: space-evenly;
 }
 .box{
-  height: 400px;
+  height: auto;
+  min-height: 400px;
   padding: 15px;
   width: 23%;
   background-color:white;
@@ -265,6 +270,7 @@ main{
 }
 .slider.items{
   display:flex;
+  overflow-x: auto;
   gap: 20px;
 }
 .items img{
@@ -290,6 +296,7 @@ main{
   z-index: 20;
   /* background: rgba(255,255,255,0.9); */
   display: flex;
+  flex-wrap: wrap;
   color: white;
   justify-content: space-evenly;
 }
@@ -320,9 +327,10 @@ main{
   font-size: 18px;
 }
 .panel2{
-  height: 300px;
+  height: auto;
   background-color:#202a36;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   padding-top: 40px;
   /* align-items: center; */
@@ -409,4 +417,193 @@ main{
 }
 .panel5-links a:hover{
     text-decoration: underline;
+}
+@media (max-width:900px) {
+  .nav-search{
+    width: auto;
+    flex: 1;
+  }
+  .panel-ops{
+    font-size: 0.75rem;
+    flex: 1;
+  }
+  .panel-ops p{
+    margin-right: 8px;
+  }
+  .hero-section{
+    height: 50vh;
+  }
+}
+@media (max-width:1156px) {
+  .box{
+    width: 48%;
+     margin-bottom: 10px;
+  }
+  .boxes{
+    width: 48%;
+    margin-bottom: 10px;
+  }
+  .panel2{
+    flex-wrap: wrap;
+  }
+  .know{
+    width: 45%;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+  .panel4{
+    grid-template-columns: repeat(4,1fr);
+  }
+  .hero-section{
+    background-position: center top;
+  }
+}
+@media (max-width:768px) {
+  .box{
+    width: 48%;
+    margin-bottom: 10px;
+  }
+  .boxes{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .panel2{
+    flex-wrap: wrap;
+  }
+  .know{
+    width: 45%;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+  .panel4{
+     grid-template-columns: repeat(2,1fr);
+     padding: 20px 15px;
+  }
+  .panel-deals{
+    display: none;
+  }
+  .panel-all{
+    justify-content: space-between;
+  }
+  .navbar{
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  .sign-in{
+    display: none;
+  }
+  .return{
+    display: none;
+  }
+  .nav-address{
+    display: none;
+  }
+  .nav-search{
+   width: auto;
+   flex: 1;
+   margin: 0 8px;
+  }
+  .panel3 {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 10px;
+  }
+  
+  .footer-btns {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .footer-btn {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  
+  .panel3 .logo {
+    width: 70px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width:450px){
+  .panel-ops{
+    overflow: hidden;
+    width: 100%;
+  }
+  .panel{
+    overflow: hidden;
+  }
+}
+ @media (max-width:768px){
+
+    .hero-section{
+        height:220px;
+        background-size:cover;
+        background-position:center;
+        display:flex;
+        justify-content:flex-end;
+        align-items:center;
+    }
+
+    .hero-msg{
+        width:100%;
+        height: 30px;
+        padding:10px;
+        font-size:8px;
+        text-align:left;
+        flex-wrap: wrap;
+        overflow: hidden;
+        margin-left: 3%;
+        margin-right: 3%;
+      }
+    .hero-msg p{
+      margin-top:-3px;
+    }
+    .shop-section{
+        position:static;     /* important */
+        margin-top:-80px;        /* important */
+    }
+}
+@media (max-width:500px){
+  .box{
+    width: 94%;
+    margin-bottom: 10px;
+  }
+  .boxes{
+    width: 94%;
+    margin-bottom: 10px;
+  }
+  
+}
+@media (max-width:900px){
+  .hero-section{
+        height:220px;
+        background-size:cover;
+        background-position:center;
+        display:flex;
+        justify-content:flex-end;
+        align-items:center;
+    }
+
+    .hero-msg{
+        width:100%;
+        height: 30px;
+        padding:10px;
+        font-size:8px;
+        text-align:left;
+        flex-wrap: wrap;
+        overflow: hidden;
+        margin-left: 3%;
+        margin-right: 3%;
+      }
+    .hero-msg p{
+      margin-top:-3px;
+    }
+    .shop-section{
+        position:static;     /* important */
+        margin-top:-80px;        /* important */
+    }
 }
